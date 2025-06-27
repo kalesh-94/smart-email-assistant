@@ -3,4 +3,5 @@ scikit-learn
 numpy
 joblib
 openai
+google
 python-dotenv
