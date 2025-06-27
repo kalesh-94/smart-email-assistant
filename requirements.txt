@@ -3,5 +3,5 @@ scikit-learn
 numpy
 joblib
 openai
-google
+google-generativeai
 python-dotenv
