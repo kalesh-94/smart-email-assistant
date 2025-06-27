@@ -5,23 +5,23 @@ from agents.email_classifier import EmailClassifier
 import os
 
 
-# ✅ Initialize Flask app
+# init flask app
 app = Flask(__name__)
 
 
-# ✅ Initialize Agents
+#  Agents
 classifier = EmailClassifier()   # No model_path/vectorizer_path needed for LLM-based
 generator = ResponseGenerator()
 escalator = EscalationAgent()
 
 
-# ✅ Home page
+#  Home 
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-# ✅ Process Email Route
+#  Process  Route
 @app.route('/process', methods=['POST'])
 def process_email():
     email_text = request.form.get('email_text')
@@ -40,7 +40,7 @@ def process_email():
         }
         return render_template('result.html', result=output)
 
-    #  2: Decision Logic
+    #  2: Decision 
     if confidence >= classifier.confidence_threshold and category != "Other":
         response = generator.generate_response(email_text, category)
         output = {
