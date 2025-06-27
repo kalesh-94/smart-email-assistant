@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 #  Agents
-classifier = EmailClassifier()   # No model_path/vectorizer_path needed for LLM-based
+classifier = EmailClassifier()  
 generator = ResponseGenerator()
 escalator = EscalationAgent()
 
