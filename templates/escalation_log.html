@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escalation Log</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/escalation.css">
+</head>
+<body>
+    <div class="log-container">
+        <h1> Escalation Log</h1>
+
+        <div class="actions">
+            <a href="/" class="btn">⬅ Back to Home</a>
+            <a href="/clear-log" class="btn danger">🗑️ Clear Logs</a>
+        </div>
+
+        <h3>Parsed Escalation Entries:</h3>
+        {% if logs %}
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Email Text</th>
+                        <th>Category</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in logs %}
+                    <tr>
+                        <td>{{ log.timestamp }}</td>
+                        <td>{{ log.email_text }}</td>
+                        <td>{{ log.category }}</td>
+                        <td>{{ log.confidence }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="no-log">No escalated emails found.</p>
+        {% endif %}
+
+        <h3>📄 Full Raw Log File:</h3>
+        <pre class="log-text">{{ full_log_text }}</pre>
+    </div>
+</body>
+</html>

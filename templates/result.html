@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result - Smart Email Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static\result.css">
+</head>
+<body>
+    <div class="result-container">
+        <h2>Classification Result</h2>
+
+        <div class="result-item">
+            <label>Email Text:</label>
+            <p>{{ result.email_text }}</p>
+        </div>
+
+        <div class="result-item">
+            <label>Predicted Category:</label>
+            <p><span class="badge">{{ result.predicted_category }}</span></p>
+        </div>
+
+        <div class="result-item">
+            <label>Confidence:</label>
+            <p>{{ result.confidence }}</p>
+        </div>
+
+        {% if result.response %}
+        <div class="result-item">
+            <label>Generated Response:</label>
+            <p>{{ result.response }}</p>
+        </div>
+        {% else %}
+        <div class="result-item">
+            <label>Status:</label>
+            <p>{{ result.status }}</p>
+        </div>
+
+        <div class="result-item">
+            <label>Reason:</label>
+            <p>{{ result.reason }}</p>
+        </div>
+
+        <div class="result-item">
+            <label>Logged to:</label>
+            <p>{{ result.logged_to }}</p>
+        </div>
+        {% endif %}
+
+        <a class="back-link" href="/">Classify Another Email</a>
+    </div>
+</body>
+</html>

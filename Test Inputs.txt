@@ -1,0 +1,26 @@
+HR
+[
+  "Hi HR team, I need to update my bank details for salary processing. Can you guide me on how to do that?",
+  "Hello, I want to apply for annual leave from next Monday. What's the approval process?",
+  "Dear HR, I haven't received my payslip for this month. Please look into it.",
+  "I’d like to request a letter confirming my employment for visa purposes.",
+  "Could someone help me understand how the new appraisal system works?"
+]
+
+
+[
+  "Hello IT, I’m unable to connect to the company VPN since morning. Please resolve this issue.",
+  "My laptop is constantly freezing and restarting on its own. Need urgent help.",
+  "I can't access the internal shared drive. It's saying permission denied.",
+  "Can you help me reset my corporate email password? I’ve forgotten it.",
+  "The antivirus software is flagging a critical system file. Is this a false positive?"
+]
+
+
+[
+  "Is the cafeteria serving anything special for Diwali this Friday?",
+  "When is the next team-building event planned?",
+  "Can I bring my family members to the office event this weekend?",
+  "There’s a problem with the air conditioning in Meeting Room B.",
+  "What’s the policy for using the gym on weekends?"
+]
