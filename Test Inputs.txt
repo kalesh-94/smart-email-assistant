@@ -1,4 +1,4 @@
-HR
+
 [
   "Hi HR team, I need to update my bank details for salary processing. Can you guide me on how to do that?",
   "Hello, I want to apply for annual leave from next Monday. What's the approval process?",
